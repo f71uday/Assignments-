@@ -1,17 +1,18 @@
 import java.util.Scanner;
 class A
-{ boolean flag = false;
+{
+    boolean flag = false;
 
-  Node start;
+      Node start;
   class Node
   {
     String first_name, last_name, branch;
     Node next;
     Node (String first_name, String last_name, String branch)
     {
-      first_name.this = first_name;
-      last_name.this = last_name;
-      branch.this = branch;
+      this.first_name = first_name;
+      this.last_name = last_name;
+      this.branch = branch;
       next = null;
 
     }
@@ -23,7 +24,7 @@ class A
     start= new_user;
 
   }
-  public boolean Search (String first_name, String last_name, String branch)
+  public void Search (String first_name, String last_name, String branch)
   {
     Node last = start;
    while (last.next != null)
@@ -32,25 +33,27 @@ class A
          {
            flag = true;
            System.out.println(first_name+" "+last_name+" "+branch);
-           break;
-           return true;
+
+           //return true;
          }
-         else return false;
+
          last = last.next;
         //return;
 
        }
+       //return false;
 
-
-     }
-
+  }
 
 }
 
 
+
+
+
 //kushals code begins here
 
-
+/*
 class B
 {
 	void ProB()
@@ -80,27 +83,27 @@ class C extends A
 		System.out.println("In C :- "+b);
 	}
 }
-
+*/
 class Demo3
 {
 	public static void main(String args[])
 	{
 		A a1 = new A();
 		a1.add("Amit","jain","IT");
-		boolean b;
-		b = a1.Search("Amit","jain","IT");
-		System.out.println(b);
-
+		//boolean b;
+		a1.Search("Amit","jain","IT");
+		//System.out.println(b);
+/*
 		C a2 = new C();
 		a2.first_name= "Amit";
 		a2.last_name= "jain";
 		a2.branch= "IT";
 
 		b = a2.Search(a2.first_name,a2.last_name,a2.branch);
-
-		System.out.println(b);
-
+*/
+		//System.out.println(b);
+/*
 		B m = new B();
-		m.ProB();
+		m.ProB();*/
 	}
 }
